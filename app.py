@@ -312,7 +312,7 @@ if not expenses.empty:
     )
 
     if st.button("Clear Expense History", type="secondary"):
-    st.session_state.expenses = []
+        st.session_state.expenses = []
 
     # Clear previously generated AI recommendations
     if "strategy" in st.session_state:
