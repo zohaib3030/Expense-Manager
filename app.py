@@ -1,23 +1,5 @@
 
 from pathlib import Path
-import streamlit as st
-
-st.write("Current working directory:", Path.cwd())
-st.write("Secrets file exists:",
-         (Path.cwd() / ".streamlit" / "secrets.toml").is_file())
-
-try:
-    key = st.secrets.get("GEMINI_API_KEY", "")
-    st.write("Key found:", bool(key.strip()))
-except Exception as e:
-    st.error(f"Secrets loading failed: {type(e).__name__}: {e}")
-
-
-
-
-
-
-from pathlib import Path
 from datetime import date
 
 import pandas as pd
