@@ -311,14 +311,14 @@ if not expenses.empty:
         hide_index=True,
     )
 
-    if st.button("Clear Expense History", type="secondary"):
-        st.session_state.expenses = []
+if st.button("Clear Expense History", type="secondary"):
+    st.session_state.expenses = []
 
     # Clear previously generated AI recommendations
-    if "strategy" in st.session_state:
-        del st.session_state["strategy"]
+if "strategy" in st.session_state:
+    del st.session_state["strategy"]
 
-    st.rerun()
+st.rerun()
 
     csv_data = expenses[COLUMNS].to_csv(index=False).encode("utf-8")
 
