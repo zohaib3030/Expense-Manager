@@ -311,9 +311,9 @@ if not expenses.empty:
         hide_index=True,
     )
 
-csv_data = expenses[COLUMNS].to_csv(index=False).encode("utf-8")
+    csv_data = expenses[COLUMNS].to_csv(index=False).encode("utf-8")
 
-st.download_button(
+    st.download_button(
         "Download all expenses as CSV",
         data=csv_data,
         file_name="my_expenses.csv",
